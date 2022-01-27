@@ -17,10 +17,12 @@ counter=0
 sleep 10
 php artisan migrate
 
-echo ' ----------------============== Set web server access rights ==============----------------'
-setfacl -dR -m u:www-data:rwX /var/www/html
-setfacl -R -m u:www-data:rwX tmp
+echo '-------------=================== Chown to www-data =============-----------------'
+chown -R www-data:www-data /var/www/html
 
+echo ' ----------------============== Set web server access rights ==============----------------'
+setfacl -Rdm u:www-data:rwX /var/www/html
+setfacl -Rdm u:www-data:rwX /tmp
 # set default rights or all 'other' users to rwx
 # R-recursive, d-default, m-modify
 # to check existing file-access-control-list for the directory
