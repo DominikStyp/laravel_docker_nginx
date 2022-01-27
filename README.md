@@ -1,4 +1,7 @@
 # Docker for Laravel
 
-## How to use
+## Configuration
+`cd .docker && cp .env.example .env`
+
+## How to run
 `cd .docker && ./runProject`
