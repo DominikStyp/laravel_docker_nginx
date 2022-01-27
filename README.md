@@ -1,1 +1,4 @@
-# laravel_docker_nginx
+# Docker for Laravel
+
+## How to use
+`cd .docker && ./runProject`
