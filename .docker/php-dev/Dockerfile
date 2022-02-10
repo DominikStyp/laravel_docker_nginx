@@ -18,7 +18,7 @@ RUN apt-get install -y default-mysql-client
 ENV PHP_IDE_CONFIG "serverName=application"
 
 # Node
-RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
 # Remove default xdebug ini
